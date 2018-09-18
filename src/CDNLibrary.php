@@ -4,6 +4,7 @@ namespace CommsExpress\CDN;
 
 use CommsExpress\CDN\Exceptions\URLNotSet;
 use GuzzleHttp\Client;
+use function GuzzleHttp\Psr7\stream_for;
 use PHPUnit\Framework\Exception;
 
 class CDNLibrary
@@ -17,15 +18,15 @@ class CDNLibrary
         $this->checkClientHasURL();
     }
 
-    public function upload($file): UploadResponse{
+    public function upload($filepath): UploadResponse{
         $response = new UploadResponse();
 
         try{
             $client_response = $this->client->post('api/upload', [
-                'multipart' =>  [
+                'multipart'  =>  [
                     [
                         'name'  =>  'file',
-                        'contents'  =>  $file
+                        'contents'  =>  fopen($filepath, 'r')
                     ]
                 ],
                 'headers'   =>  [
@@ -42,6 +43,18 @@ class CDNLibrary
         }
 
         return $response;
+    }
+
+    public function getFile($file_id){
+        try{
+            $client_response = $this->client->get('api/file/'.$file_id);
+
+            $file = $this->buildFileObjectFromResponseBody(json_decode($client_response->getBody()));
+        }catch(Exception $e){
+            return null;
+        }
+
+        return $file;
     }
 
     private function buildFileObjectFromResponseBody($responseBody): File{
