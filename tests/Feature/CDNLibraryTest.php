@@ -69,7 +69,7 @@ class CDNLibraryTest extends \PHPUnit\Framework\TestCase
     }
 
     private function getFile(){
-        return './tests/example.png';
+        return fopen('./tests/example.png','r');
     }
 
     private function prepareResponse(){

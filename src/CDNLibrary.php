@@ -18,7 +18,7 @@ class CDNLibrary
         $this->checkClientHasURL();
     }
 
-    public function upload($filepath): UploadResponse{
+    public function upload($file): UploadResponse{
         $response = new UploadResponse();
 
         try{
@@ -26,7 +26,7 @@ class CDNLibrary
                 'multipart'  =>  [
                     [
                         'name'  =>  'file',
-                        'contents'  =>  fopen($filepath, 'r')
+                        'contents'  =>  $file
                     ]
                 ],
                 'headers'   =>  [
