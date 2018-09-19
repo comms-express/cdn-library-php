@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b86a73f4-1da6-4ad5-b89f-1cb466d7a553" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/CDNLibrary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CDNLibrary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CDNLibraryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CDNLibraryTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/CDNLibraryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/CDNLibraryTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="b86a73f4-1da6-4ad5-b89f-1cb466d7a553" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,14 +25,14 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="json" value="3" />
-          <entry key="php" value="279" />
+          <entry key="php" value="282" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="3" />
-          <entry key="PHP" value="279" />
+          <entry key="PHP" value="282" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="5" />
         </counts>
@@ -46,7 +42,7 @@
           <entry key="dummy" value="47" />
           <entry key="gitignore" value="8" />
           <entry key="json" value="72" />
-          <entry key="php" value="9122" />
+          <entry key="php" value="9123" />
           <entry key="txt" value="48" />
           <entry key="xml" value="54" />
         </counts>
@@ -54,7 +50,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="72" />
-          <entry key="PHP" value="9122" />
+          <entry key="PHP" value="9123" />
           <entry key="PLAIN_TEXT" value="103" />
           <entry key="XML" value="54" />
         </counts>
@@ -69,10 +65,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/CDNLibraryTest.php">
+        <entry file="file://$PROJECT_DIR$/src/CDNLibrary.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+            <state relative-caret-position="551">
+              <caret line="49" column="60" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
+              <folding>
+                <element signature="e#36#78#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,8 +110,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/CDNServiceProvider.php" />
         <option value="$PROJECT_DIR$/tests/Unit/CDNLibraryTest.php" />
-        <option value="$PROJECT_DIR$/src/CDNLibrary.php" />
         <option value="$PROJECT_DIR$/tests/Feature/CDNLibraryTest.php" />
+        <option value="$PROJECT_DIR$/src/CDNLibrary.php" />
       </list>
     </option>
   </component>
@@ -196,6 +195,11 @@
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="Unit" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cdn-library-php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cdn-library-php" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -244,7 +248,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27714000" />
+    <option name="totallyTimeSpent" value="28563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2048" height="1152" extended-state="6" />
@@ -383,13 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CDNServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/File.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -397,13 +394,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CDNLibrary.php">
+    <entry file="file://$PROJECT_DIR$/tests/Feature/CDNLibraryTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-          <folding>
-            <element signature="e#36#78#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="1538">
+          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -414,10 +408,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/CDNLibraryTest.php">
+    <entry file="file://$PROJECT_DIR$/src/CDNServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+        <state relative-caret-position="226">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CDNLibrary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="49" column="60" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
+          <folding>
+            <element signature="e#36#78#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

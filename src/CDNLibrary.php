@@ -47,7 +47,7 @@ class CDNLibrary
 
     public function getFile($file_id){
         try{
-            $client_response = $this->client->get('api/file/'.$file_id);
+            $client_response = $this->client->get('api/files/'.$file_id);
 
             $file = $this->buildFileObjectFromResponseBody(json_decode($client_response->getBody()));
         }catch(Exception $e){
