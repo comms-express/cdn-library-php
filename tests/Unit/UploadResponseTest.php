@@ -47,4 +47,14 @@ class UploadResponseTest extends TestCase
 
         $this->assertTrue($this->response->failed());
     }
+
+    /** @test */
+
+    public function it_can_set_an_error()
+    {
+        $this->response->setError(new \Exception('Test'));
+
+        $this->assertFalse($this->response->success());
+        $this->assertContains('A general error occurred', $this->response->getMessage());
+    }
 }

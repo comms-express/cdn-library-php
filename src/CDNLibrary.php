@@ -39,7 +39,7 @@ class CDNLibrary
             $response->addFile($file);
 
         }catch(\Exception $e){
-            $response->setToFailed();
+            $response->setError($e);
         }
 
         return $response;
@@ -48,7 +48,6 @@ class CDNLibrary
     public function getFile($file_id){
         try{
             $client_response = $this->client->get('api/files/'.$file_id);
-
             $file = $this->buildFileObjectFromResponseBody(json_decode($client_response->getBody()));
         }catch(Exception $e){
             return null;
