@@ -12,7 +12,7 @@ use Psr\Http\Message\RequestInterface;
 class CDNLibraryTest extends \PHPUnit\Framework\TestCase
 {
     /** @test */
-    
+
     public function uploads_a_file()
     {
         $mock = new \GuzzleHttp\Handler\MockHandler([
@@ -66,6 +66,34 @@ class CDNLibraryTest extends \PHPUnit\Framework\TestCase
         $this->assertInstanceOf(File::class, $file);
         $this->assertEquals(1, $file->getID());
         $this->assertEquals('http://cdn.test/file.png', $file->getURL());
+    }
+
+    /** @test */
+
+    public function provides_error_if_upload_fails()
+    {
+        $mock = new \GuzzleHttp\Handler\MockHandler([
+            new \GuzzleHttp\Psr7\Response(500,[],$this->prepareResponse())
+        ]);
+        $handler = \GuzzleHttp\HandlerStack::create($mock);
+        $handler->push(function(callable $handler){
+            return function(RequestInterface $request, array $options) use($handler){
+                $request = $request->withHeader('Accept', 'application/json');
+                return $handler($request, $options);
+            };
+        });
+
+        $client = new \GuzzleHttp\Client([
+            'handler'   =>  $handler,
+            'base_uri'  =>  'http://cdn.test'
+        ]);
+
+        $library = new CDNLibrary($client);
+
+        $response = $library->upload($this->getFile());
+
+        $this->assertFalse($response->success());
+        $this->assertNotEmpty($response->getMessage());
     }
 
     private function getFile(){
